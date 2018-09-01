@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'FlexLayout-OC_Example' do
+  pod 'FlexLayout-OC', :path => '../'
+
+  target 'FlexLayout-OC_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
