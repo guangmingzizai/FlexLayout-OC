@@ -7,23 +7,32 @@
 //
 
 #import "GMViewController.h"
+#import "GMFlexView.h"
 
 @interface GMViewController ()
+
+@property (nonatomic, readonly) GMFlexView *mainView;
 
 @end
 
 @implementation GMViewController
 
+- (GMFlexView *)mainView
+{
+    return (GMFlexView *)self.view;
+}
+
+- (void)loadView
+{
+    GMFlexView *theView = [[GMFlexView alloc] init];
+    self.view = theView;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 @end

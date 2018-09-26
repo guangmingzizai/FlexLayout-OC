@@ -2,6 +2,8 @@ use_frameworks!
 
 target 'FlexLayout-OC_Example' do
   pod 'FlexLayout-OC', :path => '../'
+  pod 'ZZFLEX', :git => 'https://github.com/tbl00c/ZZFLEX.git'
+  
 
   target 'FlexLayout-OC_Tests' do
     inherit! :search_paths

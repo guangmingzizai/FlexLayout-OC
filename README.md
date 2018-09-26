@@ -5,11 +5,22 @@
 [![License](https://img.shields.io/cocoapods/l/FlexLayout-OC.svg?style=flat)](https://cocoapods.org/pods/FlexLayout-OC)
 [![Platform](https://img.shields.io/cocoapods/p/FlexLayout-OC.svg?style=flat)](https://cocoapods.org/pods/FlexLayout-OC)
 
-## Example
+FlexLayout-OC adds a nice Objective-C interface to the highly optimized [Yoga](https://github.com/facebook/yoga) flexbox implementation. Concise, intuitive & chainable syntax.
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Flexbox is an incredible improvement over UIStackView. It is simpler to use, much more versatile and amazingly performant.
+
+> Yoga is a multiplatform CSS Flexbox implementation (iOS/Android/...). Yoga is also the layout engine of React Native.
+
+If you need **swift** version, please visit [FlexLayout](https://github.com/layoutBox/FlexLayout).
 
 ## Requirements
+
+* iOS 8.0+
+* Xcode 8.0+ / Xcode 9.0+
+
+## Documentation
+
+FlexLayout-OC's API is same as [FlexLayout](https://github.com/layoutBox/FlexLayout), except some language differences.
 
 ## Installation
 
@@ -20,9 +31,13 @@ it, simply add the following line to your Podfile:
 pod 'FlexLayout-OC'
 ```
 
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
 ## Author
 
-guangmingzizai@qq.com, wangjianfei@yipingfang.com
+guangmingzizai@qq.com
 
 ## License
 

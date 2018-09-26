@@ -1,0 +1,37 @@
+PODS:
+  - FlexLayout-OC (0.1.0):
+    - YogaKit (~> 1.7)
+  - Yoga (1.9.0)
+  - YogaKit (1.9.0):
+    - Yoga (~> 1.9)
+  - ZZFLEX (0.1.0)
+
+DEPENDENCIES:
+  - FlexLayout-OC (from `../`)
+  - ZZFLEX (from `https://github.com/tbl00c/ZZFLEX.git`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Yoga
+    - YogaKit
+
+EXTERNAL SOURCES:
+  FlexLayout-OC:
+    :path: "../"
+  ZZFLEX:
+    :git: https://github.com/tbl00c/ZZFLEX.git
+
+CHECKOUT OPTIONS:
+  ZZFLEX:
+    :commit: ddac318054fb884245fcd5fea5fdc93226a196a9
+    :git: https://github.com/tbl00c/ZZFLEX.git
+
+SPEC CHECKSUMS:
+  FlexLayout-OC: 9e1d9c29645eaa86b0210d09bf03d43546d71a0f
+  Yoga: aaae8abea68951f60bee05f6277d3eed90bb91bb
+  YogaKit: d447a9bb808718e6f58e52a2255a8050081a3ead
+  ZZFLEX: fb543e4d38670a2f455c4cb15c27a799c3ba9fe0
+
+PODFILE CHECKSUM: 6c7e412761b38057e69bea50363c2dc1bf2986bc
+
+COCOAPODS: 1.5.3
