@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 #import "GMFlexDefinitions.h"
 
+#define GMFLEX_PROPERTY @property (nonatomic, copy, readonly)
+
 @class GMFlex;
 typedef void(^GMFlexDefine)(GMFlex *flex);
 
@@ -42,7 +44,7 @@ typedef void(^GMFlexDefine)(GMFlex *flex);
  
  - Returns: The added view flex interface
  */
-- (GMFlex * (^)(void))addItem;
+GMFLEX_PROPERTY GMFlex * (^addItem)(void);
 
 /**
  This method is similar to `addItem(: UIView)` except that it also creates the flex item's UIView. Internally the method creates an
@@ -51,7 +53,7 @@ typedef void(^GMFlexDefine)(GMFlex *flex);
  - Parameter view: view to add to the flex container
  - Returns: The added view flex interface
  */
-- (GMFlex * (^)(UIView *))addItemView;
+GMFLEX_PROPERTY GMFlex * (^addItemView)(UIView *);
 
 /**
  This method is used to structure your code so that it matches the flexbox structure. The method has a closure parameter with a
@@ -61,7 +63,8 @@ typedef void(^GMFlexDefine)(GMFlex *flex);
  - Parameter closure:
  - Returns: Flex interface
  */
-- (GMFlex * (^)(GMFlexDefine))define;
+//- (GMFlex * (^)(GMFlexDefine))define;
+@property (nonatomic, copy, readonly) GMFlex * (^define)(GMFlexDefine);
 
 #pragma mark - Layout / intrinsicSize / sizeThatFits
 
@@ -83,7 +86,7 @@ typedef void(^GMFlexDefine)(GMFlex *flex);
  - Parameter included: true to layout the view
  - Returns:
  */
-- (GMFlex * (^)(BOOL))flex_isIncludedInLayout;
+GMFLEX_PROPERTY GMFlex * (^flex_isIncludedInLayout)(BOOL);
 
 /**
  The framework is so highly optimized, that flex item are layouted only when a flex property is changed and when flex container
@@ -94,7 +97,7 @@ typedef void(^GMFlexDefine)(GMFlex *flex);
  
  - Returns: Flex interface
  */
-- (GMFlex * (^)(void))markDirty;
+GMFLEX_PROPERTY GMFlex * (^markDirty)(void);
 
 /**
  Returns the item size when layouted in the specified frame size
@@ -118,14 +121,14 @@ typedef void(^GMFlexDefine)(GMFlex *flex);
  
  - Parameter value: Default value is .column
  */
-- (GMFlex * (^)(GMFlexDirection))direction;
+GMFLEX_PROPERTY GMFlex * (^direction)(GMFlexDirection);
 
 /**
  The `wrap` property controls whether the flex container is single-lined or multi-lined, and the direction of the cross-axis, which determines the direction in which the new lines are stacked in.
  
  - Parameter value: Default value is .noWrap
  */
-- (GMFlex * (^)(GMFlexWrapMode))wrap;
+GMFLEX_PROPERTY GMFlex * (^wrap)(GMFlexWrapMode);
 
 /**
  Direction defaults to Inherit on all nodes except the root which defaults to LTR. It is up to you to detect the
@@ -135,7 +138,7 @@ typedef void(^GMFlexDefine)(GMFlex *flex);
  - Parameter value: new LayoutDirection
  - Returns:
  */
-- (GMFlex * (^)(GMFlexLayoutDirection))layoutDirection;
+GMFLEX_PROPERTY GMFlex * (^layoutDirection)(GMFlexLayoutDirection);
 
 #pragma mark - justity, alignment, position
 
@@ -146,7 +149,7 @@ typedef void(^GMFlexDefine)(GMFlex *flex);
  
  - Parameter value: Default value is .start
  */
-- (GMFlex * (^)(GMFlexJustifyContent))justifyContent;
+GMFLEX_PROPERTY GMFlex * (^justifyContent)(GMFlexJustifyContent);
 
 /**
  The `alignItems` property defines how flex items are laid out along the cross axis on the current line.
@@ -155,7 +158,7 @@ typedef void(^GMFlexDefine)(GMFlex *flex);
  
  - Parameter value: Default value is .stretch
  */
-- (GMFlex * (^)(GMFlexAlignItems))alignItems;
+GMFLEX_PROPERTY GMFlex * (^alignItems)(GMFlexAlignItems);
 
 /**
  The `alignSelf` property controls how a child aligns in the cross direction, overriding the `alignItems`
@@ -164,7 +167,7 @@ typedef void(^GMFlexDefine)(GMFlex *flex);
  
  - Parameter value: Default value is .auto
  */
-- (GMFlex * (^)(GMFlexAlignSelf))alignSelf;
+GMFLEX_PROPERTY GMFlex * (^alignSelf)(GMFlexAlignSelf);
 
 /**
  The align-content property aligns a flex container’s lines within the flex container when there is extra space
@@ -172,7 +175,7 @@ typedef void(^GMFlexDefine)(GMFlex *flex);
  
  - Parameter value: Default value is .start
  */
-- (GMFlex * (^)(GMFlexAlignContent))alignContent;
+GMFLEX_PROPERTY GMFlex * (^alignContent)(GMFlexAlignContent);
 
 #pragma mark - grow / shrink / basis
 
@@ -183,7 +186,7 @@ typedef void(^GMFlexDefine)(GMFlex *flex);
  
  - Parameter value: Default value is 0
  */
-- (GMFlex * (^)(CGFloat))grow;
+GMFLEX_PROPERTY GMFlex * (^grow)(CGFloat);
 
 /**
  It specifies the "flex shrink factor", which determines how much the flex item will shrink relative to the
@@ -197,7 +200,7 @@ typedef void(^GMFlexDefine)(GMFlex *flex);
  
  - Parameter value: Default value is 1
  */
-- (GMFlex * (^)(CGFloat))shrink;
+GMFLEX_PROPERTY GMFlex * (^shrink)(CGFloat);
 
 /**
  This property takes the same values as the width and height properties, and specifies the initial size of the
@@ -208,7 +211,7 @@ typedef void(^GMFlexDefine)(GMFlex *flex);
  
  - Parameter value: Default value is 0
  */
-- (GMFlex * (^)(void))autoBasis;
+GMFLEX_PROPERTY GMFlex * (^autoBasis)(void);
 
 /**
  This property takes the same values as the width and height properties, and specifies the initial size of the
@@ -219,121 +222,121 @@ typedef void(^GMFlexDefine)(GMFlex *flex);
  
  - Parameter value: Default value is 0
  */
-- (GMFlex * (^)(CGFloat))basis;
+GMFLEX_PROPERTY GMFlex * (^basis)(CGFloat);
 
 #pragma mark - Width / height / height
 
 /**
  The value specifies the view's width in pixels. The value must be non-negative.
  */
-- (GMFlex * (^)(void))autoWidth;
+GMFLEX_PROPERTY GMFlex * (^autoWidth)(void);
 
 /**
  The value specifies the view's width in pixels. The value must be non-negative.
  */
-- (GMFlex * (^)(CGFloat))width;
+GMFLEX_PROPERTY GMFlex * (^width)(CGFloat);
 
 /**
  The value specifies the view's width in percentage of its container width. The value must be non-negative.
  Example: view.flex.width(20%)
  */
-- (GMFlex * (^)(CGFloat))widthWithPercent;
+GMFLEX_PROPERTY GMFlex * (^widthWithPercent)(CGFloat);
 
 /**
  The value specifies the view's height in pixels. The value must be non-negative.
  */
-- (GMFlex * (^)(void))autoHeight;
+GMFLEX_PROPERTY GMFlex * (^autoHeight)(void);
 
 /**
  The value specifies the view's height in pixels. The value must be non-negative.
  */
-- (GMFlex * (^)(CGFloat))height;
+GMFLEX_PROPERTY GMFlex * (^height)(CGFloat);
 
 /**
  The value specifies the view's height in percentage of its container height. The value must be non-negative.
  Example: view.flex.height(40%)
  */
-- (GMFlex * (^)(CGFloat))heightWithPercent;
+GMFLEX_PROPERTY GMFlex * (^heightWithPercent)(CGFloat);
 
 /**
  The value specifies view's width and the height in pixels. Values must be non-negative.
  */
-- (GMFlex * (^)(void))autoSize;
+GMFLEX_PROPERTY GMFlex * (^autoSize)(void);
 
 /**
  The value specifies view's width and the height in pixels. Values must be non-negative.
  */
-- (GMFlex * (^)(CGSize))size;
+GMFLEX_PROPERTY GMFlex * (^size)(CGSize);
 
 /**
  The value specifies the width and the height of the view in pixels, creating a square view. Values must be non-negative.
  */
-- (GMFlex * (^)(CGFloat))sideLength;
+GMFLEX_PROPERTY GMFlex * (^sideLength)(CGFloat);
 
 /**
  Set minWidth to undefined
  */
-- (GMFlex * (^)(void))undefinedMinWidth;
+GMFLEX_PROPERTY GMFlex * (^undefinedMinWidth)(void);
 
 /**
  The value specifies the view's minimum width in pixels. The value must be non-negative.
  */
-- (GMFlex * (^)(CGFloat))minWidth;
+GMFLEX_PROPERTY GMFlex * (^minWidth)(CGFloat);
 
 /**
  The value specifies the view's minimum width in percentage of its container width. The value must be non-negative.
  */
-- (GMFlex * (^)(CGFloat))minWidthWithPercent;
+GMFLEX_PROPERTY GMFlex * (^minWidthWithPercent)(CGFloat);
 
 /**
  Set maxWidth to undefined
  */
-- (GMFlex * (^)(void))undefinedMaxWidth;
+GMFLEX_PROPERTY GMFlex * (^undefinedMaxWidth)(void);
 
 /**
  The value specifies the view's maximum width in pixels. The value must be non-negative.
  */
-- (GMFlex * (^)(CGFloat))maxWidth;
+GMFLEX_PROPERTY GMFlex * (^maxWidth)(CGFloat);
 
 /**
  The value specifies the view's maximum width in percentage of its container width. The value must be non-negative.
  */
-- (GMFlex * (^)(CGFloat))maxWidthWithPercent;
+GMFLEX_PROPERTY GMFlex * (^maxWidthWithPercent)(CGFloat);
 
 /**
 Set minHeight to undefined
  */
-- (GMFlex * (^)(void))undefinedMinHeight;
+GMFLEX_PROPERTY GMFlex * (^undefinedMinHeight)(void);
 
 /**
  The value specifies the view's minimum height in pixels. The value must be non-negative.
  */
-- (GMFlex * (^)(CGFloat))minHeight;
+GMFLEX_PROPERTY GMFlex * (^minHeight)(CGFloat);
 
 /**
  The value specifies the view's minimum height in percentage of its container height. The value must be non-negative.
  */
-- (GMFlex * (^)(CGFloat))minHeightWithPercent;
+GMFLEX_PROPERTY GMFlex * (^minHeightWithPercent)(CGFloat);
 
 /**
  Set maxHeight to undefined
  */
-- (GMFlex * (^)(void))undefinedMaxHeight;
+GMFLEX_PROPERTY GMFlex * (^undefinedMaxHeight)(void);
 
 /**
  The value specifies the view's maximum height in pixels. The value must be non-negative.
  */
-- (GMFlex * (^)(CGFloat))maxHeight;
+GMFLEX_PROPERTY GMFlex * (^maxHeight)(CGFloat);
 
 /**
  The value specifies the view's maximum height in percentage of its container height. The value must be non-negative.
  */
-- (GMFlex * (^)(CGFloat))maxHeightWithPercent;
+GMFLEX_PROPERTY GMFlex * (^maxHeightWithPercent)(CGFloat);
 
 /**
  Set aspectRatio to undefined
  */
-- (GMFlex * (^)(void))undefinedAspectRatio;
+GMFLEX_PROPERTY GMFlex * (^undefinedAspectRatio)(void);
 
 /**
  AspectRatio is a property introduced by Yoga that don't exist in CSS. AspectRatio solves the problem of knowing
@@ -343,7 +346,7 @@ Set minHeight to undefined
  - Parameter value:
  - Returns:
  */
-- (GMFlex * (^)(CGFloat))aspectRatio;
+GMFLEX_PROPERTY GMFlex * (^aspectRatio)(CGFloat);
 
 /**
  AspectRatio is a property introduced by Yoga that don't exist in CSS. AspectRatio solves the problem of knowing
@@ -353,7 +356,7 @@ Set minHeight to undefined
  - Parameter value:
  - Returns:
  */
-- (GMFlex * (^)(UIImageView *))aspectRatioOfImageView;
+GMFLEX_PROPERTY GMFlex * (^aspectRatioOfImageView)(UIImageView *);
 
 #pragma mark - Absolute positionning
 
@@ -362,123 +365,123 @@ Set minHeight to undefined
  
  - Parameter value: Default value is .relative
  */
-- (GMFlex * (^)(GMFlexPosition))position;
+GMFLEX_PROPERTY GMFlex * (^position)(GMFlexPosition);
 
 /**
  Set the left edge distance from the container left edge in pixels.
  This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
  */
-- (GMFlex * (^)(CGFloat))left;
+GMFLEX_PROPERTY GMFlex * (^left)(CGFloat);
 
 /**
  Set the left edge distance from the container left edge in percentage of its container width.
  This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
  */
-- (GMFlex * (^)(CGFloat))leftWithPercent;
+GMFLEX_PROPERTY GMFlex * (^leftWithPercent)(CGFloat);
 
 /**
  Set the top edge distance from the container top edge in pixels.
  This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
  */
-- (GMFlex * (^)(CGFloat))top;
+GMFLEX_PROPERTY GMFlex * (^top)(CGFloat);
 
 /**
  Set the top edge distance from the container top edge in percentage of its container height.
  This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
  */
-- (GMFlex * (^)(CGFloat))topWithPercent;
+GMFLEX_PROPERTY GMFlex * (^topWithPercent)(CGFloat);
 
 /**
  Set the right edge distance from the container right edge in pixels.
  This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
  */
-- (GMFlex * (^)(CGFloat))right;
+GMFLEX_PROPERTY GMFlex * (^right)(CGFloat);
 
 /**
  Set the right edge distance from the container right edge in percentage of its container width.
  This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
  */
-- (GMFlex * (^)(CGFloat))rightWithPercent;
+GMFLEX_PROPERTY GMFlex * (^rightWithPercent)(CGFloat);
 
 /**
  Set the bottom edge distance from the container bottom edge in pixels.
  This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
  */
-- (GMFlex * (^)(CGFloat))bottom;
+GMFLEX_PROPERTY GMFlex * (^bottom)(CGFloat);
 
 /**
  Set the bottom edge distance from the container bottom edge in percentage of its container height.
  This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
  */
-- (GMFlex * (^)(CGFloat))bottomWithPercent;
+GMFLEX_PROPERTY GMFlex * (^bottomWithPercent)(CGFloat);
 
 /**
  Set the start edge (LTR=left, RTL=right) distance from the container start edge in pixels.
  This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
  */
-- (GMFlex * (^)(CGFloat))start;
+GMFLEX_PROPERTY GMFlex * (^start)(CGFloat);
 
 /**
  Set the start edge (LTR=left, RTL=right) distance from the container start edge in
  percentage of its container width.
  This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
  */
-- (GMFlex * (^)(CGFloat))startWithPercent;
+GMFLEX_PROPERTY GMFlex * (^startWithPercent)(CGFloat);
 
 /**
  Set the end edge (LTR=right, RTL=left) distance from the container end edge in pixels.
  This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
  */
-- (GMFlex * (^)(CGFloat))end;
+GMFLEX_PROPERTY GMFlex * (^end)(CGFloat);
 
 /**
  Set the end edge (LTR=right, RTL=left) distance from the container end edge in
  percentage of its container width.
  This method is valid only when the item position is absolute (`view.flex.position(.absolute)`)
  */
-- (GMFlex * (^)(CGFloat))endWithPercent;
+GMFLEX_PROPERTY GMFlex * (^endWithPercent)(CGFloat);
 
 #pragma mark - Margin
 
 /**
  Set the top margin. Top margin specify the offset the top edge of the item should have from it’s closest sibling (item) or parent (container).
  */
-- (GMFlex * (^)(CGFloat))marginTop;
+GMFLEX_PROPERTY GMFlex * (^marginTop)(CGFloat);
 
 /**
  Set margin top with percent value, for example, width is 90%, the value should be 90.
  */
-- (GMFlex * (^)(CGFloat))marginTopWithPercent;
+GMFLEX_PROPERTY GMFlex * (^marginTopWithPercent)(CGFloat);
 
 /**
  Set the left margin. Left margin specify the offset the left edge of the item should have from it’s closest sibling (item) or parent (container).
  */
-- (GMFlex * (^)(CGFloat))marginLeft;
+GMFLEX_PROPERTY GMFlex * (^marginLeft)(CGFloat);
 
 /**
  Set margin left with percent value, for example, width is 90%, the value should be 90.
  */
-- (GMFlex * (^)(CGFloat))marginLeftWithPercent;
+GMFLEX_PROPERTY GMFlex * (^marginLeftWithPercent)(CGFloat);
 
 /**
  Set the bottom margin. Bottom margin specify the offset the bottom edge of the item should have from it’s closest sibling (item) or parent (container).
  */
-- (GMFlex * (^)(CGFloat))marginBottom;
+GMFLEX_PROPERTY GMFlex * (^marginBottom)(CGFloat);
 
 /**
  Set margin bottom with percent value, for example, width is 90%, the value should be 90.
  */
-- (GMFlex * (^)(CGFloat))marginBottomWithPercent;
+GMFLEX_PROPERTY GMFlex * (^marginBottomWithPercent)(CGFloat);
 
 /**
  Set the right margin. Right margin specify the offset the right edge of the item should have from it’s closest sibling (item) or parent (container).
  */
-- (GMFlex * (^)(CGFloat))marginRight;
+GMFLEX_PROPERTY GMFlex * (^marginRight)(CGFloat);
 
 /**
  Set margin right with percent value, for example, width is 90%, the value should be 90.
  */
-- (GMFlex * (^)(CGFloat))marginRightWithPercent;
+GMFLEX_PROPERTY GMFlex * (^marginRightWithPercent)(CGFloat);
 
 /**
  Set the start margin.
@@ -487,12 +490,12 @@ Set minHeight to undefined
  * In LTR direction, start margin specify the offset the **left** edge of the item should have from it’s closest sibling (item) or parent (container).
  * IN RTL direction, start margin specify the offset the **right** edge of the item should have from it’s closest sibling (item) or parent (container).
  */
-- (GMFlex * (^)(CGFloat))marginStart;
+GMFLEX_PROPERTY GMFlex * (^marginStart)(CGFloat);
 
 /**
  Set margin start with percent value, for example, width is 90%, the value should be 90.
  */
-- (GMFlex * (^)(CGFloat))marginStartWithPercent;
+GMFLEX_PROPERTY GMFlex * (^marginStartWithPercent)(CGFloat);
 
 /**
  Set the end margin.
@@ -501,38 +504,38 @@ Set minHeight to undefined
  * In LTR direction, end margin specify the offset the **right** edge of the item should have from it’s closest sibling (item) or parent (container).
  * IN RTL direction, end margin specify the offset the **left** edge of the item should have from it’s closest sibling (item) or parent (container).
  */
-- (GMFlex * (^)(CGFloat))marginEnd;
+GMFLEX_PROPERTY GMFlex * (^marginEnd)(CGFloat);
 
 /**
  Set margin end with percent value, for example, width is 90%, the value should be 90.
  */
-- (GMFlex * (^)(CGFloat))marginEndWithPercent;
+GMFLEX_PROPERTY GMFlex * (^marginEndWithPercent)(CGFloat);
 
 /**
  Set the left, right, start, end to the specified value.
  */
-- (GMFlex * (^)(CGFloat))marginHorizontal;
+GMFLEX_PROPERTY GMFlex * (^marginHorizontal)(CGFloat);
 
 /**
  Set margin horizontal with percent value, for example, width is 90%, the value should be 90.
  */
-- (GMFlex * (^)(CGFloat))marginHorizontalWithPercent;
+GMFLEX_PROPERTY GMFlex * (^marginHorizontalWithPercent)(CGFloat);
 
 /**
  Set the top and bottom margins to the specified value.
  */
-- (GMFlex * (^)(CGFloat))marginVertical;
+GMFLEX_PROPERTY GMFlex * (^marginVertical)(CGFloat);
 
 /**
  Set margin vertical with percent value, for example, width is 90%, the value should be 90.
  */
-- (GMFlex * (^)(CGFloat))marginVerticalWithPercent;
+GMFLEX_PROPERTY GMFlex * (^marginVerticalWithPercent)(CGFloat);
 
 /**
  Set all margins using UIEdgeInsets.
  This method is particularly useful to set all margins using iOS 11 `UIView.safeAreaInsets`.
  */
-- (GMFlex * (^)(UIEdgeInsets))marginWithInsets;
+GMFLEX_PROPERTY GMFlex * (^marginWithInsets)(UIEdgeInsets);
 
 /**
  Set margins using NSDirectionalEdgeInsets.
@@ -540,59 +543,59 @@ Set minHeight to undefined
  
  Available only on iOS 11 and higher.
  */
-- (GMFlex * (^)(NSDirectionalEdgeInsets))marginWithDirectionalInsets NS_AVAILABLE_IOS(11_0);
+GMFLEX_PROPERTY GMFlex * (^marginWithDirectionalInsets)(NSDirectionalEdgeInsets) NS_AVAILABLE_IOS(11_0);
 
 /**
  Set all margins to the specified value.
  */
-- (GMFlex * (^)(CGFloat))margin;
+GMFLEX_PROPERTY GMFlex * (^margin)(CGFloat);
 
 /**
  Set margin with percent value, for example, width is 90%, the value should be 90.
  */
-- (GMFlex * (^)(CGFloat))marginWithPercent;
+GMFLEX_PROPERTY GMFlex * (^marginWithPercent)(CGFloat);
 
 /**
  Set the individually vertical margins (top, bottom) and horizontal margins (left, right, start, end).
  */
-- (GMFlex * (^)(CGFloat, CGFloat))marginVH;
+GMFLEX_PROPERTY GMFlex * (^marginVH)(CGFloat, CGFloat);
 
 /**
  Set margin horizontal and vertical with percent value, for example, width is 90%, the value should be 90.
  */
-- (GMFlex * (^)(CGFloat, CGFloat))marginVHWithPercent;
+GMFLEX_PROPERTY GMFlex * (^marginVHWithPercent)(CGFloat, CGFloat);
 
 /**
  Set all margins (top, left, bottom, right)
  */
-- (GMFlex * (^)(CGFloat, CGFloat, CGFloat, CGFloat))marginAll;
+GMFLEX_PROPERTY GMFlex * (^marginAll)(CGFloat, CGFloat, CGFloat, CGFloat);
 
 /**
  Set all margins with percent value, for example, width is 90%, the value should be 90.
  */
-- (GMFlex * (^)(CGFloat, CGFloat, CGFloat, CGFloat))marginAllWithPercent;
+GMFLEX_PROPERTY GMFlex * (^marginAllWithPercent)(CGFloat, CGFloat, CGFloat, CGFloat);
 
 #pragma mark - Padding
 
 /**
  Set the top padding. Top padding specify the **offset children should have** from the container's top edge.
  */
-- (GMFlex * (^)(CGFloat))paddingTop;
+GMFLEX_PROPERTY GMFlex * (^paddingTop)(CGFloat);
 
 /**
  Set the left padding. Left padding specify the **offset children should have** from the container's left edge.
  */
-- (GMFlex * (^)(CGFloat))paddingLeft;
+GMFLEX_PROPERTY GMFlex * (^paddingLeft)(CGFloat);
 
 /**
  Set the bottom padding. Bottom padding specify the **offset children should have** from the container's bottom edge.
  */
-- (GMFlex * (^)(CGFloat))paddingBottom;
+GMFLEX_PROPERTY GMFlex * (^paddingBottom)(CGFloat);
 
 /**
  Set the right padding. Right padding specify the **offset children should have** from the container's right edge.
  */
-- (GMFlex * (^)(CGFloat))paddingRight;
+GMFLEX_PROPERTY GMFlex * (^paddingRight)(CGFloat);
 
 /**
  Set the start padding.
@@ -601,7 +604,7 @@ Set minHeight to undefined
  * In LTR direction, start padding specify the **offset children should have** from the container's left edge.
  * IN RTL direction, start padding specify the **offset children should have** from the container's right edge.
  */
-- (GMFlex * (^)(CGFloat))paddingStart;
+GMFLEX_PROPERTY GMFlex * (^paddingStart)(CGFloat);
 
 /**
  Set the end padding.
@@ -610,23 +613,23 @@ Set minHeight to undefined
  * In LTR direction, end padding specify the **offset children should have** from the container's right edge.
  * IN RTL direction, end padding specify the **offset children should have** from the container's left edge.
  */
-- (GMFlex * (^)(CGFloat))paddingEnd;
+GMFLEX_PROPERTY GMFlex * (^paddingEnd)(CGFloat);
 
 /**
  Set the left, right, start and end paddings to the specified value.
  */
-- (GMFlex * (^)(CGFloat))paddingHorizontal;
+GMFLEX_PROPERTY GMFlex * (^paddingHorizontal)(CGFloat);
 
 /**
  Set the top and bottom paddings to the specified value.
  */
-- (GMFlex * (^)(CGFloat))paddingVertical;
+GMFLEX_PROPERTY GMFlex * (^paddingVertical)(CGFloat);
 
 /**
  Set paddings using UIEdgeInsets.
  This method is particularly useful to set all paddings using iOS 11 `UIView.safeAreaInsets`.
  */
-- (GMFlex * (^)(UIEdgeInsets))paddingWithInsets;
+GMFLEX_PROPERTY GMFlex * (^paddingWithInsets)(UIEdgeInsets);
 
 /**
  Set paddings using NSDirectionalEdgeInsets.
@@ -634,22 +637,22 @@ Set minHeight to undefined
  
  Available only on iOS 11 and higher.
  */
-- (GMFlex * (^)(NSDirectionalEdgeInsets))paddingWithDirectionalInsets NS_AVAILABLE_IOS(11_0);
+GMFLEX_PROPERTY GMFlex * (^paddingWithDirectionalInsets)(NSDirectionalEdgeInsets) NS_AVAILABLE_IOS(11_0);
 
 /**
  Set all paddings to the specified value.
  */
-- (GMFlex * (^)(CGFloat))padding;
+GMFLEX_PROPERTY GMFlex * (^padding)(CGFloat);
 
 /**
  Set the individually vertical paddings (top, bottom) and horizontal paddings (left, right, start, end).
  */
-- (GMFlex * (^)(CGFloat, CGFloat))paddingVH;
+GMFLEX_PROPERTY GMFlex * (^paddingVH)(CGFloat, CGFloat);
 
 /**
  Set all paddings (top, left, bottom, right)
  */
-- (GMFlex * (^)(CGFloat, CGFloat, CGFloat, CGFloat))paddingAll;
+GMFLEX_PROPERTY GMFlex * (^paddingAll)(CGFloat, CGFloat, CGFloat, CGFloat);
 
 #pragma mark - UIView Visual properties
 
@@ -659,13 +662,13 @@ Set minHeight to undefined
  - Parameter color: new color
  - Returns: flex interface
  */
-- (GMFlex * (^)(UIColor *))backgroundColor;
+GMFLEX_PROPERTY GMFlex * (^backgroundColor)(UIColor *);
 
 #pragma mark - Display
 
 /**
  Set the view display or not
  */
-- (GMFlex * (^)(GMFlexDisplay))display;
+GMFLEX_PROPERTY GMFlex * (^display)(GMFlexDisplay);
 
 @end

@@ -866,7 +866,7 @@
 
 YGValue YGValueMake(CGFloat value)
 {
-    YGValue ygValue; ygValue.value = value; return ygValue;
+    YGValue ygValue; ygValue.value = value; ygValue.unit = YGUnitPoint; return ygValue;
 }
 
 YGValue YGValueMakeWithUnit(CGFloat value, YGUnit unit)
