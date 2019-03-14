@@ -224,7 +224,7 @@ GMFLEX_PROPERTY GMFlex * (^autoBasis)(void);
  */
 GMFLEX_PROPERTY GMFlex * (^basis)(CGFloat);
 
-#pragma mark - Width / height / height
+#pragma mark - Dimension / width / height / size
 
 /**
  The value specifies the view's width in pixels. The value must be non-negative.

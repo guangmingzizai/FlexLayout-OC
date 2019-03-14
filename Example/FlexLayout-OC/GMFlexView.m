@@ -37,6 +37,11 @@
             for (UILabel *fruitLabel in fruitLabels) {
                 flex.addItemView(fruitLabel).marginTop(10);
             }
+            
+            flex.addItem()
+            .backgroundColor(UIColor.greenColor)
+            .marginTop(44)
+            .sideLength(80);
         });
         [self addSubview:_rootFlexContainer];
     }

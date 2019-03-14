@@ -61,6 +61,7 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		6C089069223A3D3D000CBB8D /* FlexLayout-OC_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlexLayout-OC_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		6DC93F7DEC80399599D68D78 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EC781DECC43F1920E164FE5 /* FlexLayout-OC.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "FlexLayout-OC.podspec"; path = "../FlexLayout-OC.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -163,6 +164,7 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				6C089069223A3D3D000CBB8D /* FlexLayout-OC_Example-Bridging-Header.h */,
 			);
 			name = "Example for FlexLayout-OC";
 			path = "FlexLayout-OC";
@@ -270,6 +272,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "guangmingzizai@qq.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						LastSwiftMigration = 1010;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -359,7 +364,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FlexLayout-OC_Example/Pods-FlexLayout-OC_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-FlexLayout-OC_Example/Pods-FlexLayout-OC_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FlexLayout-OC/FlexLayout_OC.framework",
 				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
 				"${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework",
@@ -374,7 +379,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlexLayout-OC_Example/Pods-FlexLayout-OC_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlexLayout-OC_Example/Pods-FlexLayout-OC_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -517,13 +522,18 @@
 			baseConfigurationReference = CAE9D5B0194FD3A7C4AF6131 /* Pods-FlexLayout-OC_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlexLayout-OC/FlexLayout-OC-Prefix.pch";
 				INFOPLIST_FILE = "FlexLayout-OC/FlexLayout-OC-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlexLayout-OC/FlexLayout-OC_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -533,13 +543,17 @@
 			baseConfigurationReference = E0734DB7381592D2F376491F /* Pods-FlexLayout-OC_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlexLayout-OC/FlexLayout-OC-Prefix.pch";
 				INFOPLIST_FILE = "FlexLayout-OC/FlexLayout-OC-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlexLayout-OC/FlexLayout-OC_Example-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
