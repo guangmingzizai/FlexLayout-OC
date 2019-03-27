@@ -1,20 +1,20 @@
 PODS:
-  - FlexLayout-OC (1.0.2):
-    - YogaKit-GM
-  - Yoga (1.9.0)
-  - YogaKit-GM (0.1.0):
+  - FlexLayout-OC (1.0.3):
+    - GMYogaKit
+  - GMYogaKit (0.1.0):
     - Yoga (~> 1.9)
+  - Yoga (1.9.0)
   - ZZFLEX (0.1.0)
 
 DEPENDENCIES:
   - FlexLayout-OC (from `../`)
-  - YogaKit-GM
+  - GMYogaKit
   - ZZFLEX (from `https://github.com/tbl00c/ZZFLEX.git`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - GMYogaKit
     - Yoga
-    - YogaKit-GM
 
 EXTERNAL SOURCES:
   FlexLayout-OC:
@@ -28,11 +28,11 @@ CHECKOUT OPTIONS:
     :git: https://github.com/tbl00c/ZZFLEX.git
 
 SPEC CHECKSUMS:
-  FlexLayout-OC: 15280110d29b36689533af8ec0e99b2ecbab2f69
+  FlexLayout-OC: 08f24272f6a19b5b7fcdaad7e1d4e0e82cb247dc
+  GMYogaKit: d78de0039f3ef5b5ab3dec9968d533536bd8ef39
   Yoga: aaae8abea68951f60bee05f6277d3eed90bb91bb
-  YogaKit-GM: 9e439a1418d9d1c90b6c878737d9157837f2bf79
   ZZFLEX: fb543e4d38670a2f455c4cb15c27a799c3ba9fe0
 
-PODFILE CHECKSUM: 286db40c011e4faa47119e5b0e3ec304fb7d6415
+PODFILE CHECKSUM: 5f72033b8853639c3504ff47a7aeb4d09910e7db
 
 COCOAPODS: 1.6.1

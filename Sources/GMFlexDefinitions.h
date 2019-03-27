@@ -8,7 +8,7 @@
 #ifndef GMFlexDefinitions_h
 #define GMFlexDefinitions_h
 
-#import <YogaKit-GM/YGLayout.h>
+#import <GMYogaKit/YGLayout.h>
 
 typedef NS_ENUM(int, GMFlexDirection) {
     /// Default value. The flexible items are displayed vertically, as a column.

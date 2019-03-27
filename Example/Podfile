@@ -3,7 +3,7 @@ platform :ios, '9.0'
 target 'FlexLayout-OC_Example' do
   pod 'FlexLayout-OC', :path => '../'
   pod 'ZZFLEX', :git => 'https://github.com/tbl00c/ZZFLEX.git'
-  pod 'YogaKit-GM'
+  pod 'GMYogaKit'
 
   target 'FlexLayout-OC_Tests' do
     inherit! :search_paths

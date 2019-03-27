@@ -6,8 +6,8 @@
 //
 
 #import "GMFlex.h"
-#import <YogaKit-GM/YGLayout.h>
-#import <YogaKit-GM/UIView+Yoga.h>
+#import <GMYogaKit/YGLayout.h>
+#import <GMYogaKit/UIView+Yoga.h>
 #import "UIView+FlexLayout.h"
 
 @interface GMFlex()
