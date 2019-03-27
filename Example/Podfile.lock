@@ -1,6 +1,6 @@
 PODS:
-  - FlexLayout-OC (0.1.0):
-    - YogaKit (~> 1.7)
+  - FlexLayout-OC (1.0.0):
+    - YogaKit (~> 1.9)
   - Yoga (1.9.0)
   - YogaKit (1.9.0):
     - Yoga (~> 1.9)
@@ -27,7 +27,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/tbl00c/ZZFLEX.git
 
 SPEC CHECKSUMS:
-  FlexLayout-OC: 3163e24ede8d1ea75c1116b57384d2b68af6a3b1
+  FlexLayout-OC: f9cf51697d6748029ad71fabe6881664c25ff703
   Yoga: aaae8abea68951f60bee05f6277d3eed90bb91bb
   YogaKit: d447a9bb808718e6f58e52a2255a8050081a3ead
   ZZFLEX: fb543e4d38670a2f455c4cb15c27a799c3ba9fe0

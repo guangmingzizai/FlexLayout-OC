@@ -32,7 +32,7 @@ Flexbox is an incredible improvement over UIStackView. It is simpler to use, muc
   s.ios.deployment_target = '8.0'
   s.source_files = "Sources/**/*.{swift,h,m,mm,cpp,c}"
   s.libraries    = 'c++'
-  s.dependency 'YogaKit', '~> 1.7'
+  s.dependency 'YogaKit', '~> 1.9'
   s.requires_arc = true
 
   
