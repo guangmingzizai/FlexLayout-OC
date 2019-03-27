@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FlexLayout-OC'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.platform         = :ios, "8.0"
   s.summary          = 'FlexLayout-OC adds a nice Objective-C interface to the highly optimized facebook/yoga flexbox implementation. Concise, intuitive & chainable syntax.'
 
@@ -32,7 +32,7 @@ Flexbox is an incredible improvement over UIStackView. It is simpler to use, muc
   s.ios.deployment_target = '8.0'
   s.source_files = "Sources/**/*.{swift,h,m,mm,cpp,c}"
   s.libraries    = 'c++'
-  s.dependency 'YogaKit', '~> 1.9'
+  s.dependency 'YogaKit-GM'
   s.requires_arc = true
 
   
