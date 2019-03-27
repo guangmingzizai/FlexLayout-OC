@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		395B148B157580DE7742A7A5 /* Pods_FlexLayout_OC_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1F604A0A81FE1DBE7D90C9 /* Pods_FlexLayout_OC_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -21,9 +20,10 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		70ACA0926DA605490133F128 /* libPods-FlexLayout-OC_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F87ED3A4D96EE179A70A0C55 /* libPods-FlexLayout-OC_Example.a */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		DDB7F159C103D9918AFF4CF0 /* Pods_FlexLayout_OC_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83ABC78AA4CA3D0CA6FB9BC5 /* Pods_FlexLayout_OC_Example.framework */; };
+		B4CEB430FDD9D75F7CD0F19B /* libPods-FlexLayout-OC_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23328246BDA37DDB839BF349 /* libPods-FlexLayout-OC_Tests.a */; };
 		ED64FD23215B1FB500B908BB /* NSArray+HOF.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64FD1F215B1FB500B908BB /* NSArray+HOF.m */; };
 		ED64FD24215B1FB500B908BB /* NSArray+HOFC.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64FD21215B1FB500B908BB /* NSArray+HOFC.m */; };
 		EDA5D6FE213B9DAB00B221B2 /* GMFlexView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA5D6FD213B9DAB00B221B2 /* GMFlexView.m */; };
@@ -41,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		16396A5191D88E8B5D5A8BF6 /* Pods-FlexLayout-OC_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayout-OC_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlexLayout-OC_Tests/Pods-FlexLayout-OC_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		23328246BDA37DDB839BF349 /* libPods-FlexLayout-OC_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlexLayout-OC_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F611B551A6EFE8DA23F879 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* FlexLayout-OC_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FlexLayout-OC_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,10 +66,8 @@
 		6DC93F7DEC80399599D68D78 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EC781DECC43F1920E164FE5 /* FlexLayout-OC.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "FlexLayout-OC.podspec"; path = "../FlexLayout-OC.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		83ABC78AA4CA3D0CA6FB9BC5 /* Pods_FlexLayout_OC_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayout_OC_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B477CD93867C70C80B1A745 /* Pods-FlexLayout-OC_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayout-OC_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlexLayout-OC_Tests/Pods-FlexLayout-OC_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		AC1F604A0A81FE1DBE7D90C9 /* Pods_FlexLayout_OC_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayout_OC_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE9D5B0194FD3A7C4AF6131 /* Pods-FlexLayout-OC_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayout-OC_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlexLayout-OC_Example/Pods-FlexLayout-OC_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E0734DB7381592D2F376491F /* Pods-FlexLayout-OC_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayout-OC_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlexLayout-OC_Example/Pods-FlexLayout-OC_Example.release.xcconfig"; sourceTree = "<group>"; };
 		ED64FD1F215B1FB500B908BB /* NSArray+HOF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+HOF.m"; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		ED64FD22215B1FB500B908BB /* NSArray+HOF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+HOF.h"; sourceTree = "<group>"; };
 		EDA5D6FC213B9DAB00B221B2 /* GMFlexView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMFlexView.h; sourceTree = "<group>"; };
 		EDA5D6FD213B9DAB00B221B2 /* GMFlexView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMFlexView.m; sourceTree = "<group>"; };
+		F87ED3A4D96EE179A70A0C55 /* libPods-FlexLayout-OC_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlexLayout-OC_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				DDB7F159C103D9918AFF4CF0 /* Pods_FlexLayout_OC_Example.framework in Frameworks */,
+				70ACA0926DA605490133F128 /* libPods-FlexLayout-OC_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				395B148B157580DE7742A7A5 /* Pods_FlexLayout_OC_Tests.framework in Frameworks */,
+				B4CEB430FDD9D75F7CD0F19B /* libPods-FlexLayout-OC_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,8 +144,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				83ABC78AA4CA3D0CA6FB9BC5 /* Pods_FlexLayout_OC_Example.framework */,
-				AC1F604A0A81FE1DBE7D90C9 /* Pods_FlexLayout_OC_Tests.framework */,
+				F87ED3A4D96EE179A70A0C55 /* libPods-FlexLayout-OC_Example.a */,
+				23328246BDA37DDB839BF349 /* libPods-FlexLayout-OC_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -232,7 +232,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				E7382174E1D01DDF92304584 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -356,30 +355,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E7382174E1D01DDF92304584 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FlexLayout-OC_Example/Pods-FlexLayout-OC_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FlexLayout-OC/FlexLayout_OC.framework",
-				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
-				"${BUILT_PRODUCTS_DIR}/YogaKit-GM/YogaKit_GM.framework",
-				"${BUILT_PRODUCTS_DIR}/ZZFLEX/ZZFLEX.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout_OC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YogaKit_GM.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZZFLEX.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlexLayout-OC_Example/Pods-FlexLayout-OC_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

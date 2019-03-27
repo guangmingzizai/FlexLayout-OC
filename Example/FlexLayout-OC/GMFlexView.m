@@ -7,7 +7,7 @@
 //
 
 #import "GMFlexView.h"
-#import <FlexLayout_OC/FlexLayout-OC.h>
+#import <FlexLayout-OC/FlexLayout-OC.h>
 #import <ZZFLEX/ZZFLEX.h>
 #import "NSArray+HOF.h"
 

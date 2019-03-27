@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FlexLayout-OC'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.platform         = :ios, "8.0"
   s.summary          = 'FlexLayout-OC adds a nice Objective-C interface to the highly optimized facebook/yoga flexbox implementation. Concise, intuitive & chainable syntax.'
 
